@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeonPortfólio-Contato</title>
+
+<!--ESTILOS CSS-->
+<link rel="stylesheet" href="CSS/Estilo.css">
+<link rel="stylesheet" href="CSS/Reset.css">
+
+<!--FONTES-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&ampfamily=Roboto+Mono&ampdisplay=swap" rel="stylesheet">
+
+<!--ESTILOS-->
+<style>
+
+.posicaotitulo{
+     position: absolute;
+     margin: 0;
+     padding: 0;
+     top: 90px;
+     left: 60px;
+}
+
+
+.paragrafoparamentros{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+}
+
+/*IDs DE CADA INPUT*/
+#nome {
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 600;
+ 
+}
+
+#sobrenome {
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 600;
+}
+
+#celular {
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 600;
+}
+
+#email {
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 600;
+}
+
+#msg {
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 600;
+}
+/*CLASSES DO FORMULÁRIO*/
+.box {
+     display: flex;
+     height: 100vh;
+     justify-content: left;
+     align-items: center;
+     padding: 10px;
+     font-family:'Roboto Mono', monospace;
+     letter-spacing:-0.03rem;
+     font-weight: 600;
+}
+
+.container{
+    max-width: 900px;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    top: 30px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;   
+}
+
+.container form .tableposicao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .tableposicao .input-box {
+    
+    width: calc(100% / 2 - 20px);
+}
+
+.tableposicao .input-box .detalhes{
+    display: block;
+    margin-bottom: 5px;   
+}
+
+.tableposicao .input-box input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;   
+}
+
+.tableposicao .input-box input:focus,
+.tableposicao .input-box input:valid{
+    border-color:#ff00ea ;
+}
+
+textarea{
+    display: block;
+    margin-top: 5px;
+    height: 35px;
+    width: 210%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+textarea:focus{
+    border-color:#ff00ea ;
+    border-bottom-width: 2px;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #f8f8f8;
+    border: none;
+    font-size: 22px;
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:-0.03rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #ff00eacc;    
+}
+
+@media (max-width: 584px) {
+    .container{
+    max-width: 100%;}
+}
+
+@media (max-width: 584px) {
+    body {
+    max-width: 100%;}
+}
+
+@media (max-width: 584px) {
+    nav {
+    max-width: 100%;}
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Menu de Navegção -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>    
+    
+<!-- Titulo H2 e Paragrafo, usado paragrafo dentro do H2 para utilizar
+o mesmo posicionamento do titulo -->
+
+<h2 class="posicaotitulo">
+     //Entre em contato através do formúlario abaixo
+      <p class="paragrafoparamentros"><br>* Solicite orçamento, envie sua proposta, tire dúvidas<br> ou até mesmo deixe sua sugestão, será um prazer atende-lo...
+      </p>
+</h2>
+
+<!--FORMULÁRIO-->
+<div class="box">
+ <div class="container">
+     <form action="mailto:leoncostamendez88@gmail.com" method="post" class="form">
+       <div class="tableposicao">
+        <div class="input-box">
+            <span class="detalhes">Nome</span>
+         <tr>
+            <td><input type="text" name="nome" placeholder="Digite seu nome" required id="nome"></td>
+         </tr>
+        </div>
+        <div class="input-box">
+            <span class="detalhes">Sobrenome</span>
+         <tr>
+            <td><input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required id="sobrenome"></td>
+         </tr>
+        </div>
+        <div class="input-box">
+            <span class="detalhes">Celular</span>
+         <tr>
+            <td><input type="tel" name="celular" placeholder="DDD + Celular" required id="celular"></td>
+         </tr>
+        </div>
+        <div class="input-box">
+            <span class="detalhes">E-mail</span>
+         <tr>
+            <td><input type="email" name="email" placeholder="E-mail" required  id="email"></td>
+         </tr>
+        </div>
+        <div class="input-box">
+            <span class="detalhes">Deixe sua mensagem!</span>
+         <tr>
+            <td><textarea name="msg" rows="10" cols="103" placeholder="Escreva sua mensagem..." id="msg"></textarea></td>
+         </tr>
+         <div class="button">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+     </form>
+ </div>
+</div>
+
+</body>
+</html>
